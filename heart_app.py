@@ -1,12 +1,11 @@
 #!pip install streamlit
-#!pip install joblib
 import streamlit as st
 import pandas as pd
-from joblib import dump
+import cloudpickle
 from sklearn.preprocessing import LabelEncoder
 
-model = joblib.dump("random_forest_model.joblib")
-model
+with open('"random_forest_model.pkl") as f:
+          model = cloudpickle.load(f)
 
 st.title('Heart Failure Prediction App')
 
