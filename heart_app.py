@@ -46,7 +46,7 @@ input_data = pd.DataFrame({
 
 
 if st.button("Predict"):
-    model = load("heart_failure_prediction.joblib')
+    model = load('heart_failure_prediction.joblib')
 
     prediction = model.predict(input_data)[0]
 
