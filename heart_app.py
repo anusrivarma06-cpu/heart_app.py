@@ -1,4 +1,5 @@
 #!pip install streamlit
+#!pip install cloudpickle
 import streamlit as st
 import pandas as pd
 import cloudpickle
