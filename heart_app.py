@@ -1,7 +1,7 @@
 #!pip install streamlit
 import streamlit as st
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
+
 
 model =load('heart_failure_prediction.joblib')
 
