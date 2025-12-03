@@ -1,12 +1,11 @@
 #!pip install streamlit
-#!pip install cloudpickle
 import streamlit as st
 import pandas as pd
-import cloudpickle
+from joblib import load
 from sklearn.preprocessing import LabelEncoder
 
-with open("random_forest_model.pkl") as f:
-          model = cloudpickle.load(f)
+model =load('heart_failure_prediction.joblib')
+
 
 st.title('Heart Failure Prediction App')
 
@@ -47,7 +46,8 @@ input_data = pd.DataFrame({
 
 
 if st.button("Predict"):
-    model = joblib.load("random_forest_model.joblib")
+    model = load("heart_failure_prediction.joblib')
+
     prediction = model.predict(input_data)[0]
 
     if prediction == 1:
