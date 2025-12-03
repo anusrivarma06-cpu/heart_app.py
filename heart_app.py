@@ -6,11 +6,7 @@ import joblib
 from joblib import load
 from sklearn.preprocessing import LabelEncoder
 
-@st.cache_resource
-def load_model():
-    return joblib.load("random_forest_model.joblib")
-
-model = load_model()
+model = joblib.load("random_forest_model.joblib")
 model
 
 st.title('Heart Failure Prediction App')
