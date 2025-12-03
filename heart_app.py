@@ -4,7 +4,7 @@ import pandas as pd
 import cloudpickle
 from sklearn.preprocessing import LabelEncoder
 
-with open('"random_forest_model.pkl") as f:
+with open("random_forest_model.pkl") as f:
           model = cloudpickle.load(f)
 
 st.title('Heart Failure Prediction App')
