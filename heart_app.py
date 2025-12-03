@@ -2,7 +2,6 @@
 #!pip install joblib
 import streamlit as st
 import pandas as pd
-import joblib
 from joblib import load
 from sklearn.preprocessing import LabelEncoder
 
